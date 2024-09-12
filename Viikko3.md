@@ -25,7 +25,7 @@ Join-harjoitukset
     -> left join game on game.location = airport.ident
     -> where airport.name like '%hels%';
 
-    1[Harjoitustehtävä 4](Viikko3_join_harjoitukset_4.png)
+    ![Harjoitustehtävä 4](Viikko3_join_harjoitukset_4.png)
 
 5. select goal.name, game.screen_name
     -> from goal
