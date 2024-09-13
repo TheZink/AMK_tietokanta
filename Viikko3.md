@@ -34,3 +34,56 @@ Join-harjoitukset
 
     ![Harjoitustehtävä 5](Viikko3_join_harjoitukset_5.png)
 
+Sisäkysely
+
+1. select country.name
+    -> from country
+    -> where iso_country in(
+    -> select iso_country
+    -> from airport
+    -> where name like '%satsuma%');
+
+    ![Harjoitustehtävä 1](Viikko3_sisakysely_1.png)
+
+2. select name
+    -> from airport
+    -> where iso_country in(
+    -> select iso_country
+    -> from country
+    -> where name = 'Monaco');
+    
+    ![Harjoitustehtävä 2](Viikko3_sisakysely_2.png)
+
+3. select screen_name
+    -> from game
+    -> where id in(
+    -> select game_id
+    -> from goal_reached
+    -> where goal_id in(
+    -> select id
+    -> from goal
+    -> where name = 'CLOUDS')
+    -> );
+
+    ![Harjoitustehtävä 3](Viikko3_sisakysely_3.png)
+
+4. select name
+    -> from country
+    -> where iso_country not in(
+    -> select iso_country
+    -> from airport);
+    
+    ![Harjoitustehtävä 4](Viikko3_sisakysely_4.png)
+
+5. select name
+    -> from goal
+    -> where id not in(
+    -> select goal_id
+    -> from goal_reached
+    -> where game_id not in(
+    -> select id
+    -> from game
+    -> where name = 'Heini')
+    -> );
+
+    ![alt text](image.png)
