@@ -42,3 +42,41 @@ Koostetieto kyselyt
     -> order by country.iso_country;
 
     ![Harjoitustehtävä 6](Viikko4_koostetieto_6.png)
+
+7. select name
+    -> from airport
+    -> where elevation_ft in(
+    -> select max(elevation_ft)
+    -> from airport)
+    -> ;
+
+    ![Harjoitustehtävä 7](Viikko4_koostetieto_7.png)
+
+8. select country.name
+    -> from country
+    -> where country.iso_country in(
+    -> select iso_country
+    -> from airport
+    -> where elevation_ft in(
+    -> select max(elevation_ft)
+    -> from airport)
+    -> );
+
+    ![Harjoitustehtävä 8](Viikko4_koostetieto_8.png)
+
+9. select count(*)
+    -> from game
+    -> where game.id in(
+    -> select game_id
+    -> from goal_reached)
+    -> and game.screen_name = 'Vesa';
+
+    ![Harjoitustehtävä 9](Viikko4_koostetieto_9.png)
+
+10. select name
+    -> from airport
+    -> where latitude_deg in(
+    -> select min(latitude_deg)
+    -> from airport);
+
+    ![Harjoitustehtävä 10](Viikko4_koostetieto_10.png)
